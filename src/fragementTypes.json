@@ -1,0 +1,181 @@
+{
+    "__schema": {
+      "types": [
+        {
+          "kind": "INTERFACE",
+          "name": "Node",
+          "possibleTypes": [
+            {
+              "name": "Category"
+            },
+            {
+              "name": "MediaItem"
+            },
+            {
+              "name": "Post"
+            },
+            {
+              "name": "User"
+            },
+            {
+              "name": "Comment"
+            },
+            {
+              "name": "CommentAuthor"
+            },
+            {
+              "name": "PostType"
+            },
+            {
+              "name": "Taxonomy"
+            },
+            {
+              "name": "Page"
+            },
+            {
+              "name": "Revision"
+            },
+            {
+              "name": "Tag"
+            },
+            {
+              "name": "UserRole"
+            },
+            {
+              "name": "Menu"
+            },
+            {
+              "name": "MenuItem"
+            },
+            {
+              "name": "Plugin"
+            },
+            {
+              "name": "Theme"
+            }
+          ]
+        },
+        {
+          "kind": "UNION",
+          "name": "PostObjectUnion",
+          "possibleTypes": [
+            {
+              "name": "Post"
+            },
+            {
+              "name": "Page"
+            },
+            {
+              "name": "MediaItem"
+            },
+            {
+              "name": "Revision"
+            }
+          ]
+        },
+        {
+          "kind": "UNION",
+          "name": "CommentAuthorUnion",
+          "possibleTypes": [
+            {
+              "name": "User"
+            },
+            {
+              "name": "CommentAuthor"
+            }
+          ]
+        },
+        {
+          "kind": "UNION",
+          "name": "TermObjectUnion",
+          "possibleTypes": [
+            {
+              "name": "Category"
+            },
+            {
+              "name": "Tag"
+            }
+          ]
+        },
+        {
+          "kind": "UNION",
+          "name": "HomePageWidgets_Widgetscontainer_AddWidgets",
+          "possibleTypes": [
+            {
+              "name": "HomePageWidgets_Widgetscontainer_AddWidgets_CustomCarousel"
+            },
+            {
+              "name": "HomePageWidgets_Widgetscontainer_AddWidgets_ThumbnailCarousel"
+            },
+            {
+              "name": "HomePageWidgets_Widgetscontainer_AddWidgets_ListPost"
+            },
+            {
+              "name": "HomePageWidgets_Widgetscontainer_AddWidgets_ListCategory"
+            },
+            {
+              "name": "HomePageWidgets_Widgetscontainer_AddWidgets_CardCarousel"
+            },
+            {
+              "name": "HomePageWidgets_Widgetscontainer_AddWidgets_ImageCarousel"
+            }
+          ]
+        },
+        {
+          "kind": "UNION",
+          "name": "HomePageWidgets_Widgetscontainer_AddWidgets_ListPost_Post",
+          "possibleTypes": [
+            {
+              "name": "Post"
+            },
+            {
+              "name": "Page"
+            }
+          ]
+        },
+        {
+          "kind": "UNION",
+          "name": "HomePageWidgets_Widgetscontainer_AddWidgets_CardCarousel_Post",
+          "possibleTypes": [
+            {
+              "name": "Post"
+            },
+            {
+              "name": "Page"
+            }
+          ]
+        },
+        {
+          "kind": "UNION",
+          "name": "HomePageWidgets_Widgetscontainer_AddWidgets_ImageCarousel_Posts",
+          "possibleTypes": [
+            {
+              "name": "Post"
+            }
+          ]
+        },
+        {
+          "kind": "UNION",
+          "name": "MenuItemObjectUnion",
+          "possibleTypes": [
+            {
+              "name": "Post"
+            },
+            {
+              "name": "Page"
+            },
+            {
+              "name": "Category"
+            },
+            {
+              "name": "Tag"
+            },
+            {
+              "name": "MenuItem"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
