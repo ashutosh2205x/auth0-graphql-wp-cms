@@ -23,7 +23,7 @@ const client = new ApolloClient({
   link: new HttpLink({
     // CMS URL HERE
        uri: "http://localhost/demo/graphql"
-      //  uri: "https://kievents.co/twimcast/graphql"
+      //  uri: "https://************* */.co/******/graphql"
 
   }),
   cache

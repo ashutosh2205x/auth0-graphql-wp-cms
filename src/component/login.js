@@ -1,18 +1,20 @@
 import React from "react";
 import { Link } from "@reach/router";
-
+import "../style/style.css";
 function Login(props) {
   console.log("loginprops", props);
   return (
     <div>
-      <button onClick={props.loginprops.login}>Login via Auth0</button>
+      <button onClick={props.loginprops.login} className="button1">
+        Login via Auth0
+      </button>
       <br />
       <Link to="/">
-        <button>Home page</button>
+        <button className="button2">Home page</button>
       </Link>
       <br />
       <Link to="/profile">
-        <button>Profile page</button>
+        <button className="button3">Profile page</button>
       </Link>
     </div>
   );

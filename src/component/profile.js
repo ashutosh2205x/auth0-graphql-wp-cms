@@ -48,6 +48,7 @@ function Page(props) {
         <button
           variant="contained"
           color="secondary"
+          className="button3"
           onClick={props.userdata.user.logout}
         >
           Log out
