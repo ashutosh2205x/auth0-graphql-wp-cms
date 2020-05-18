@@ -16,7 +16,7 @@ function Profile(props) {
 }
 
 function Page(props) {
-  console.log(props);
+  console.log('profile',props);
   let userdata = props.userdata.user.getProfile();
 
   const { loading, error, data } = useQuery(more_query);
@@ -38,10 +38,6 @@ function Page(props) {
         </div>
 
         <Link to="/">Go to Home</Link>
-        <br />
-
-        <br />
-
         <br />
         <br />
 

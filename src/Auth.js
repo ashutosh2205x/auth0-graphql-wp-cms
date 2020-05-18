@@ -7,7 +7,7 @@ const LOGIN_FAIL_PAGE = "/";
 export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: "akb2205.auth0.com",
-    clientID: "cZChE5rLJ010zRJPXjvbwfhPMlnjNxjm",
+    clientID: "MXyNuVX4sl4sLAtcjAK9vOzJpyltnlrl",
     redirectUri: "http://localhost:3000/callback",
     audience: "https://akb2205.auth0.com/userinfo",
     responseType: "token id_token",
@@ -15,7 +15,7 @@ export default class Auth {
   });
 
   constructor() {
-    this.login = this.login.bind(this);
+    // this.login = this.login.bind(this);
     this.handleAuthentication = this.handleAuthentication.bind(this);
     this.isAuthenticated = this.isAuthenticated.bind(this);
     this.logout = this.logout.bind(this);
@@ -23,7 +23,7 @@ export default class Auth {
 
   }
 
-  login() {
+  login = ()=> {
     this.auth0.authorize();
   }
 
@@ -68,7 +68,5 @@ export default class Auth {
     } else return {};
   }
 
-  fetchUsers(){
-    let url = "https://akb2205.auth0.com/api/v2/users"
-  }
+
 }

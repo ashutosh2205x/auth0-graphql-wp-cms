@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM  from "react-dom";
+import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
@@ -9,12 +9,12 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 import { HttpLink } from "apollo-link-http";
 import { IntrospectionFragmentMatcher } from "apollo-cache-inmemory";
 import introspectionQueryResultData from "./fragementTypes.json";
-import Auth from './Auth';
+import Auth from "./Auth";
 
-let auth= new Auth();
-
+let auth = new Auth();
+console.log("ENV VAR", process.env );
 const fragmentMatcher = new IntrospectionFragmentMatcher({
-  introspectionQueryResultData
+  introspectionQueryResultData,
 });
 
 const cache = new InMemoryCache({ fragmentMatcher });
@@ -22,19 +22,17 @@ const cache = new InMemoryCache({ fragmentMatcher });
 const client = new ApolloClient({
   link: new HttpLink({
     // CMS URL HERE
-       uri: "http://localhost/demo/graphql"
-      //  uri: "https://************* */.co/******/graphql"
-
+     uri: "http://localhost/demo/graphql" //for xampp localhost
+    // uri: process.env.REACT_APP_GRAPHQL_URI,
   }),
-  cache
+  cache,
 });
-    ReactDOM.render(
-      <ApolloProvider client={client}>
-        <App {...auth}/>
-      </ApolloProvider>,
-      document.getElementById("root")
-    );
-
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App {...auth} />
+  </ApolloProvider>,
+  document.getElementById("root")
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister()  register() below. Note this comes with some pitfalls.
